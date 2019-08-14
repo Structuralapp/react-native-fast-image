@@ -31,7 +31,7 @@
 	dispatch_once(&onceToken, ^{
 		_shared = [FFFastImageCacheNoParamMapper new];
 	});
-	
+
 	return _shared;
 }
 
@@ -39,14 +39,17 @@
 	self = [super init];
 	if (self) {
 		_staticUrls = [NSMutableSet new];
-		[[SDWebImageManager sharedManager] setCacheKeyFilter:^NSString * _Nullable(NSURL * _Nullable url) {
-			NSString *staticURLString = [[url staticURL] absoluteString];
-			if ([_staticUrls containsObject:staticURLString]) {
-				return staticURLString;
-			}
-			return url.absoluteString;
+		SDWebImageCacheKeyFilter *cacheKeyFilter = [SDWebImageCacheKeyFilter cacheKeyFilterWithBlock:^NSString * _Nullable(NSURL * _Nonnull url) {
+			 NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithURL:url resolvingAgainstBaseURL:NO];
+			 NSString *staticURLString = [[url staticURL] absoluteString];
+			 if ([_staticUrls containsObject:staticURLString]) {
+					 return staticURLString;
+			 }
+			 urlComponents.query = nil;
+			 return urlComponents.URL.absoluteString;
 		}];
-	}
+		SDWebImageManager.sharedManager.cacheKeyFilter = cacheKeyFilter;
+	 }
 	return self;
 }
 
