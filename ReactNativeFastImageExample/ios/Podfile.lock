@@ -83,6 +83,8 @@ PODS:
   - React-jsinspector (0.60.0)
   - react-native-image-picker (0.28.1):
     - React
+  - react-native-netinfo (4.1.4):
+    - React
   - React-RCTActionSheet (0.60.0):
     - React-Core (= 0.60.0)
   - React-RCTAnimation (0.60.0):
@@ -107,7 +109,7 @@ PODS:
   - React-RCTWebSocket (0.60.0):
     - React-Core (= 0.60.0)
     - React-fishhook (= 0.60.0)
-  - RNFastImage (6.1.1):
+  - RNFastImage (7.0.2):
     - React
     - SDWebImage (~> 5.0)
     - SDWebImageWebPCoder (~> 0.2.3)
@@ -135,7 +137,8 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
-  - react-native-image-picker (from `/Users/dylan/repos/react-native-fast-image/ReactNativeFastImageExample/node_modules/react-native-image-picker`)
+  - react-native-image-picker (from `../node_modules/react-native-image-picker`)
+  - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -146,9 +149,9 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-RCTWebSocket (from `../node_modules/react-native/Libraries/WebSocket`)
-  - RNFastImage (from `/Users/dylan/repos/react-native-fast-image/ReactNativeFastImageExample/node_modules/react-native-fast-image`)
-  - RNGestureHandler (from `/Users/dylan/repos/react-native-fast-image/ReactNativeFastImageExample/node_modules/react-native-gesture-handler`)
-  - RNVectorIcons (from `/Users/dylan/repos/react-native-fast-image/ReactNativeFastImageExample/node_modules/react-native-vector-icons`)
+  - RNFastImage (from `../node_modules/react-native-fast-image`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -182,7 +185,9 @@ EXTERNAL SOURCES:
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   react-native-image-picker:
-    :path: "/Users/dylan/repos/react-native-fast-image/ReactNativeFastImageExample/node_modules/react-native-image-picker"
+    :path: "../node_modules/react-native-image-picker"
+  react-native-netinfo:
+    :path: "../node_modules/@react-native-community/netinfo"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -204,11 +209,11 @@ EXTERNAL SOURCES:
   React-RCTWebSocket:
     :path: "../node_modules/react-native/Libraries/WebSocket"
   RNFastImage:
-    :path: "/Users/dylan/repos/react-native-fast-image/ReactNativeFastImageExample/node_modules/react-native-fast-image"
+    :path: "../node_modules/react-native-fast-image"
   RNGestureHandler:
-    :path: "/Users/dylan/repos/react-native-fast-image/ReactNativeFastImageExample/node_modules/react-native-gesture-handler"
+    :path: "../node_modules/react-native-gesture-handler"
   RNVectorIcons:
-    :path: "/Users/dylan/repos/react-native-fast-image/ReactNativeFastImageExample/node_modules/react-native-vector-icons"
+    :path: "../node_modules/react-native-vector-icons"
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -227,6 +232,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 7a3554f703a58963ec80b860144ea0f0e9b910e1
   React-jsinspector: d4ed52225912efe0019bb7f1a225aec20f23049a
   react-native-image-picker: fd93361c666f397bdf72f9c6c23f13d2685b9173
+  react-native-netinfo: d0d956b8035de2c68d9367c93d2f91b5b874ae87
   React-RCTActionSheet: b27ff3cf3a68f917c46d2b94abf938b625b96570
   React-RCTAnimation: 9e4708e5bd65fca8285ce7c0aa076f3f4fa5c2f8
   React-RCTBlob: 6eafcc3a24f33785692a7be24918ade607bc8719
@@ -237,7 +243,7 @@ SPEC CHECKSUMS:
   React-RCTText: 685fca2e13b024271048e7e247ef24476f28a41e
   React-RCTVibration: 4ee1cf208ab17a50fafb1c16ffe28fe594a64e4f
   React-RCTWebSocket: fca087d583724aa0e5fef7d911f0f2a28d0f2736
-  RNFastImage: 1931a5a201e8e4123a0bea419ce02c774d512c6f
+  RNFastImage: 9b0c22643872bb7494c8d87bbbb66cc4c0d9e7a2
   RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
@@ -246,4 +252,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 7b4a00390df1c4ff9550673b474ffbe2cf75e8c6
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.5

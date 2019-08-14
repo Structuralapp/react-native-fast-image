@@ -49,7 +49,11 @@ class ImageGrid extends Component {
         const uri = getImageUrl(item.id, 100, 100)
         return (
             <View style={styles.imageContainer}>
-                <ImageComponent source={{ uri }} style={styles.image} />
+                <ImageComponent
+                  source={{
+                    uri,
+                  }}
+                style={styles.image} />
             </View>
         )
     }

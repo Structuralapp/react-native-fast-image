@@ -6,8 +6,11 @@ import Section from './Section'
 import SectionFlex from './SectionFlex'
 import FeatureText from './FeatureText'
 
-const getImageUrl = (id, width, height) =>
-    `https://source.unsplash.com/${id}/${width}x${height}`
+// const getImageUrl = (id, width, height) =>
+//     `https://source.unsplash.com/${id}/${width}x${height}`
+
+const getImageUrl = (id, width, height) => `https://picsum.photos/200/300?`
+
 const IMAGE_SIZE = 1024
 const IMAGE_SIZE_PX = PixelRatio.getPixelSizeForLayoutSize(IMAGE_SIZE)
 const IMAGE_URLS = [
@@ -27,6 +30,7 @@ const PriorityExample = ({ onPressReload, bust }) => (
                 source={{
                     uri: IMAGE_URLS[0] + bust,
                     priority: FastImage.priority.low,
+                    cacheOmitURLParams: true
                 }}
             />
             <FastImage
@@ -34,6 +38,7 @@ const PriorityExample = ({ onPressReload, bust }) => (
                 source={{
                     uri: IMAGE_URLS[1] + bust,
                     priority: FastImage.priority.normal,
+                    cacheOmitURLParams: true
                 }}
             />
             <FastImage
@@ -41,6 +46,7 @@ const PriorityExample = ({ onPressReload, bust }) => (
                 source={{
                     uri: IMAGE_URLS[2] + bust,
                     priority: FastImage.priority.high,
+                    cacheOmitURLParams: true
                 }}
             />
         </SectionFlex>
