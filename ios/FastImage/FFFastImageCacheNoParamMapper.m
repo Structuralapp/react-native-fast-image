@@ -43,9 +43,9 @@
 			 NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithURL:url resolvingAgainstBaseURL:NO];
 			 NSString *staticURLString = [[url staticURL] absoluteString];
 			 if ([_staticUrls containsObject:staticURLString]) {
-					 return staticURLString;
+				 	// urlComponents.query = nil;
+					return staticURLString;
 			 }
-			 urlComponents.query = nil;
 			 return urlComponents.URL.absoluteString;
 		}];
 		SDWebImageManager.sharedManager.cacheKeyFilter = cacheKeyFilter;

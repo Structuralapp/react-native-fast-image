@@ -75,10 +75,6 @@
         "react-test-renderer": "16.8.6",
         "semantic-release": "^15.13.18"
     },
-    "peerDependencies": {
-        "react": "^16.8.6",
-        "react-native": "^0.60.0"
-    },
     "release": {
         "plugins": [
             "@semantic-release/commit-analyzer",
