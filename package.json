@@ -71,7 +71,7 @@
         "prettier": "^1.18.2",
         "prettier-check": "^2.0.0",
         "react": "16.8.6",
-        "react-native": "^0.60.0",
+        "react-native": "0.76.0-nightly-20240815-9bc32a010",
         "react-test-renderer": "16.8.6",
         "semantic-release": "^15.13.18"
     },
